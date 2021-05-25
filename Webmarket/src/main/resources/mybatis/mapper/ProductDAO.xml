@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	<mapper namespace="com.study.springboot.dao.ProductDao">
+	
+		<insert id="addProduct" parameterType="com.study.springboot.dto.ProductDto">
+			insert into product 
+			values(#{productId},#{pname},#{unitPrice}
+				,#{description},#{manufacturer},#{category}
+				,#{unitsInStock},#{pcondition},#{filename})
+		</insert>
+		
+		<delete id="deleteProduct">
+			delete table product 
+			where productId = #{id}
+		</delete>
+		
+		<select id="selectAll" resultType="com.study.springboot.dto.ProductDto">
+			select * 
+			from product
+			order by productId
+		</select>
+		
+		<select id="selectProduct" resultType="com.study.springboot.dto.ProductDto">
+			select* 
+			from product 
+			where productId = #{id}
+		</select>
+	</mapper>
