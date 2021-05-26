@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.study.springboot.dao.loginDao">
+	<select id="selectUser" resultType="com.study.springboot.dto.UserDto">
+		select id, pw
+		from member
+		where id=#{id};
+	</select>
+	
+	<insert id="addUser" parameterType="com.study.springboot.dto.UserDto">
+		insert into member
+		values( #{id},#{pw},#{name},#{junum},#{grade}
+		,#{email},#{phone},#{address})
+	</insert>
+	
+	<update id="updatePw">
+		update member 
+		set pw = #{pw}
+		where id=#{id}
+	</update>
+</mapper>

@@ -9,15 +9,15 @@ public class ProductDto implements Serializable {
 	
 	private static final long serialVersionUID = -42470057203867700L;
 	
-	private String productId;
-	private String pname; 
-	private String unitPrice; 
-	private String description;
-	private String manufacturer;
-	private String category;
-	private long unitsInStock;
-	private String pcondition;
-	private String filename;
+	private String productId ="";
+	private String pname =""; 
+	private String unitPrice =""; 
+	private String description ="";
+	private String manufacturer ="";
+	private String category ="";
+	private long unitsInStock =0;
+	private String pcondition ="";
+	private String filename ="";
 	
 	
 	public ProductDto() {
