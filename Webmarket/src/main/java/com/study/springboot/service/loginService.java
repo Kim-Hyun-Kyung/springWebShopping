@@ -2,12 +2,14 @@ package com.study.springboot.service;
 
 import org.springframework.stereotype.Service;
 
-import com.study.springboot.dto.UserDto;
+import com.study.springboot.dto.Account;
 @Service
 public interface loginService {
-	public UserDto  selectUser(String id);
+	public Account  selectUser(String id);
 	
-	public int addUser(UserDto user);
+	public int addUser(Account user);
 	
 	public void updatePw(String id,String pw);
+	
+	public boolean validationId(String id);
 }

@@ -16,12 +16,12 @@
 			<div class="navbar-header">
 				<a class="navbar-brand" href="<c:url value='/'/>">HOME</a>
 				<a class="navbar-brand" href="<c:url value='/products.do'/>"> 상품목록</a>
-				<a class="navbar-brand" href="<c:url value='/addProduct.do'/>">상품등록</a>
+				<a class="navbar-brand" href="<c:url value='/addmin/addProduct'/>">상품등록</a>
 			</div>
 			<div>
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item"><a class="nav-link" href="<c:url value='/login.do'/>">로그인</a></li>
-					<li class="nav-item"><a class="nav-link" href="<c:url value='/addMember.do'/>">회원가입</a></li>
+					<li class="nav-item"><a class="nav-link" href="<c:url value='/user/login'/>">로그인</a></li>
+					<li class="nav-item"><a class="nav-link" href="<c:url value='/addMember'/>">회원가입</a></li>
 					
 					<li style="padding-top:7px; color:white">님</li>
 					<li class="nav-item"><a class="nav-link" href="<c:url value='/logout.do'/>">로그아웃</a></li>

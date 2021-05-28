@@ -6,9 +6,9 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-${resultScript}
+
 <script type="text/javascript">
-/* 	function checkForm() {
+	function checkForm() {
 		if (!document.newMember.id.value) {
 			alert("아이디를 입력하세요.");
 			return false;
@@ -23,7 +23,7 @@ ${resultScript}
 			alert("비밀번호를 동일하게 입력하세요.");
 			return false;
 		}
-	} */
+	} 
 </script>
 <body>
 	<jsp:include page="Menu.jsp"/>
@@ -34,7 +34,7 @@ ${resultScript}
 	</div>
 
 	<div class="container">
-		<form name="newMember" class="form-horizontal"  action="processAddMember.do" method="post" onsubmit="return checkForm()">
+		<form name="newMember" class="form-horizontal"  action="processAddMember" method="post" onsubmit="return checkForm()" >
 			<div class="form-group  row">
 				<label class="col-sm-2 ">아이디</label>
 				<div class="col-sm-3">
@@ -59,24 +59,6 @@ ${resultScript}
 					<input name="name" type="text" class="form-control">
 				</div>
 			</div>
-			<div class="form-group row">
-				<label class="col-sm-2">주민번호</label>
-				<div class="col-sm-4  ">
-					<input type="text" name="junum1" style="width: 45%"> - <input type="text" name="junum2" style="width: 45%">
-				</div>
-			</div>
-			<div class="form-group  row ">
-				<label class="col-sm-2">이메일</label>
-				<div class="col-sm-10">
-					<input type="text" name="mail1" maxlength="50">@ 
-					<select name="mail2">
-						<option>naver.com</option>
-						<option>daum.net</option>
-						<option>gmail.com</option>
-						<option>nate.com</option>
-					</select>
-				</div>				
-			</div>
 			<div class="form-group  row">
 				<label class="col-sm-2">전화번호</label>
 				<div class="col-sm-3" style="align-items: center;">
@@ -96,7 +78,7 @@ ${resultScript}
 
 				</div>
 			</div>
-			<input type="hidden" name="grade" value="Role_basic">
+			<input type="hidden" name="grade" value="ROLE_USER">
 			<div class="form-group  row">
 				<div class="col-sm-offset-2 col-sm-10 ">
 					<input type="submit" class="btn btn-primary " value="등록 " > 

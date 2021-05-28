@@ -1,17 +1,18 @@
 package com.study.springboot.dto;
 
-import org.eclipse.jdt.internal.compiler.ast.ThisReference;
-
+import org.springframework.context.annotation.Configuration;
+@Configuration
 public class AuthInfo {
 
-	private String id; 
-	private String name; 
-	private String grade;
+	private String id=""; 
+	private String name="ROLE_USER";
 	
-	public AuthInfo(String id, String name , String grade) {
+	public AuthInfo() {
+		super();
+	}
+	public AuthInfo(String id, String name ) {
 		this.id = id;
 		this.name = name;
-		this.grade = grade;
 	}
 	
 	public String getId() {
@@ -28,14 +29,6 @@ public class AuthInfo {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getGrade() {
-		return grade;
-	}
-
-	public void setGrade(String grade) {
-		this.grade = grade;
 	}
 
 }
